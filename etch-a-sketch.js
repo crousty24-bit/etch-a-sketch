@@ -1,4 +1,5 @@
 const divContainer = document.querySelector(".container");
+const resetButton = document.getElementById("reset");
 
 function createGrid(n) {
     divContainer.replaceChildren(); //remove all child divs
