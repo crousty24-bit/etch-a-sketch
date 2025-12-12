@@ -31,5 +31,6 @@ body {
 
 .square {
   box-sizing: border-box;
-  border: 1px solid red;  
+  border: 1px solid red;
+  background-color: #0f172a;
 }
