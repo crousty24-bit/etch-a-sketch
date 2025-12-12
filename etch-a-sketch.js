@@ -9,6 +9,9 @@ function createGrid(n) {
         square.style.width = squareSize + "px";
         square.style.height = squareSize + "px";
         divContainer.appendChild(square);
+        square.addEventListener("mouseover", () => {
+            square.style.backgroundColor = "red";
+        })
     }
 }
 createGrid(16);
