@@ -1,6 +1,11 @@
 const divContainer = document.querySelector(".container");
 const resetButton = document.getElementById("reset");
-
+resetButton.addEventListener("click", () => {
+    let userInput = prompt('Enter a new square grid:');
+    userInput = Number(userInput);
+    
+    createGrid(userInput);
+})
 function createGrid(n) {
     divContainer.replaceChildren(); //remove all child divs
     const squareSize = divContainer.clientWidth / n;
