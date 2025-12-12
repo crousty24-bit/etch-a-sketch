@@ -15,8 +15,23 @@ body {
   padding: 0;
   line-height: 1.6;
   word-spacing: 1.4px;
-  font-family: "Roboto", sans-serif;
-  color: var(--clr-dark);
+  font-family: sans-serif;
   background-color: var(--clr-light);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px; /*may adjust afterwards*/
+  height: 960px;
+  border: 2px solid black;
+}
+
+.square {
+  box-sizing: border-box;
+  border: 1px solid red;  
 }
