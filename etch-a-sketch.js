@@ -1,9 +1,13 @@
 const divContainer = document.querySelector(".container");
 const resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", () => {
-    let userInput = prompt('Enter a new square grid:');
+    let userInput = prompt('Enter a new square grid (max100):');
     userInput = Number(userInput);
-    
+    if (userInput > 100) {
+        userInput = 100; //set limit to 100
+    } else if (userInput < 1 || isNaN(userInput)) {
+        userInput = 16; //back to default value
+    }
     createGrid(userInput);
 })
 function createGrid(n) {
