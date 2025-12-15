@@ -1,5 +1,11 @@
 const divContainer = document.querySelector(".container");
 const resetButton = document.getElementById("reset");
+const modeColor = document.getElementById("color");
+const modeRandom = document.getElementById("random");
+const modeDarken = document.getElementById("darken");
+const clearGrid = document.getElementById("clear");
+
+let modeSelect = "color";
 
 resetButton.addEventListener("click", () => {
     let userInput = prompt('Enter a new square grid (max100):');
