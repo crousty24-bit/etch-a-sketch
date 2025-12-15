@@ -7,6 +7,19 @@ const clearGrid = document.getElementById("clear");
 
 let modeSelect = "color";
 
+modeColor.addEventListener("click", () => {
+    modeSelect = "color";
+    console.log(modeSelect);
+})
+modeRandom.addEventListener("click", () => {
+    modeSelect = "random";
+    console.log(modeSelect);
+})
+modeDarken.addEventListener("click", () => {
+    modeSelect = "darken";
+    console.log(modeSelect);
+})
+
 resetButton.addEventListener("click", () => {
     let userInput = prompt('Enter a new square grid (max100):');
     userInput = Number(userInput);
@@ -35,7 +48,15 @@ function createGrid(n) {
         square.style.height = `${100 / n}%`;
         divContainer.appendChild(square);
         square.addEventListener("mouseover", () => {
-            square.style.backgroundColor = randomColor();
+            if (modeSelect === "color") {
+                square.style.backgroundColor = "red";
+            } else if (modeSelect === "random") {
+                square.style.backgroundColor = randomColor();
+            } else if (modeSelect === "darken") {
+                square.style.backgroundColor = "black";
+            }
+            /*square.style.backgroundColor = randomColor();*/
+
         })
     }
 }
