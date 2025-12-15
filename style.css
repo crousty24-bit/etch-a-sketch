@@ -26,11 +26,11 @@ body {
   flex-wrap: wrap;
   width: 720px; /*may adjust afterwards*/
   height: 720px;
-  border: 2px solid black;
+  border: 2px solid var(--clr-dark);
 }
 
 .square {
   box-sizing: border-box;
-  border: 1px solid red;
+  border: 1px solid var(--clr-dark);
   background-color: var(--clr-light);
 }
