@@ -21,6 +21,30 @@ body {
   align-items: center;
 }
 
+.user {
+  padding: 10px;
+}
+
+button {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#color {
+  color: #e11d48;
+}
+
+#random {
+  color: rgb(131, 180, 173);
+}
+
+#darken {
+  color: grey;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
