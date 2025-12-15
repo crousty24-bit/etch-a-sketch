@@ -21,12 +21,12 @@ function randomColor () {
 
 function createGrid(n) {
     divContainer.replaceChildren(); //remove all child divs
-    const squareSize = divContainer.clientWidth / n;
+    /*const squareSize = divContainer.clientWidth / n;*/
     for (let i = 0; i < n * n; i++) {
         const square = document.createElement("div");
         square.classList.add("square");
-        square.style.width = squareSize + "px";
-        square.style.height = squareSize + "px";
+        square.style.flexBasis = `${100 / n}%`;
+        square.style.height = `${100 / n}%`;
         divContainer.appendChild(square);
         square.addEventListener("mouseover", () => {
             square.style.backgroundColor = randomColor();
