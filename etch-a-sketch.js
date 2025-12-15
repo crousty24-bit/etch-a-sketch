@@ -21,7 +21,7 @@ function randomColor () {
 
 function createGrid(n) {
     divContainer.replaceChildren(); //remove all child divs
-    /*const squareSize = divContainer.clientWidth / n;*/
+    
     for (let i = 0; i < n * n; i++) {
         const square = document.createElement("div");
         square.classList.add("square");
@@ -34,7 +34,7 @@ function createGrid(n) {
     }
 }
 createGrid(16);
-
+// flex.Basis use Flexbox not pixels to get our square size properly
 // randomColor func : takes random decimal * 256 (there 256 rgb values: 0 to 255)
 // round up that number with Math.floor
 // random value for each r g b variable
