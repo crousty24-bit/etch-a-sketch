@@ -23,7 +23,7 @@ odin project: etch-a-sketch
 
 
 
-*Update 15/12/25*
+*Update 15/12/25-*
 
 * <b>Fix previous issue</b> **✅ :** 
 
@@ -48,6 +48,12 @@ I'll remember this gotcha now : if you use Flexbox to handle your layout, let Fl
 
 
 * **Add new border color to improve grid visibily ✅**
+* **Add 4 buttons to select paint mode : color (default), random (rgb), darken and clear (back to default background) ✅ :**
 
+	- everything goes by mouseover, refers to our new var modeSelec
 
+&nbsp;	- modeSelect will get what mode is select throught 3 eventListener (click) associated to our buttons
 
+&nbsp;	- clear will select all ".square" div and apply default backgroundColor and darkLevel (reset darken prog)
+
+* **Add colors and spacing to custom user's buttons ✅**
