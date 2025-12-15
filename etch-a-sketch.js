@@ -20,6 +20,14 @@ modeDarken.addEventListener("click", () => {
     console.log(modeSelect);
 })
 
+clearGrid.addEventListener("click", () => {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(square => {
+        square.style.backgroundColor = "white"; //back to default
+        square.darkLevel = 0; //also reset darken progression
+    })
+})
+
 resetButton.addEventListener("click", () => {
     let userInput = prompt('Enter a new square grid (max100):');
     userInput = Number(userInput);
@@ -47,13 +55,22 @@ function createGrid(n) {
         square.style.flexBasis = `${100 / n}%`;
         square.style.height = `${100 / n}%`;
         divContainer.appendChild(square);
+        
         square.addEventListener("mouseover", () => {
             if (modeSelect === "color") {
                 square.style.backgroundColor = "red";
+                square.style.opacity = 1;
             } else if (modeSelect === "random") {
                 square.style.backgroundColor = randomColor();
+                square.style.opacity = 1;
             } else if (modeSelect === "darken") {
-                square.style.backgroundColor = "black";
+                if (!square.darkLevel) square.darkLevel = 0;
+
+                if (square.darkLevel < 10) {
+                    square.darkLevel +=1;
+                }
+                const alpha = square.darkLevel * 0.1;
+                square.style.backgroundColor = `rgba(0,0,0,${alpha})`;
             }
             /*square.style.backgroundColor = randomColor();*/
 
